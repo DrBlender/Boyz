@@ -51,6 +51,10 @@ class ConnectionManager:
 
 manager = ConnectionManager()
 
+@app.get("/", response_class=HTMLResponse)
+async def read_root():
+    return "<h1>Willkommen zum Video Prediction Game!</h1><p>Verbinde dich per WebSocket unter /ws/USERNAME</p>"
+
 @app.websocket("/ws/{username}")
 async def websocket_endpoint(websocket: WebSocket, username: str):
     await manager.connect(websocket, username)
