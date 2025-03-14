@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-const serverUrl = "ws://DEINE-SERVER-IP:8000/ws/";
+const serverUrl = "ws://195.201.34.39:8000/ws/";
 
 function App() {
   const [username, setUsername] = useState("");
